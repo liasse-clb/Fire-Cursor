@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  cursor: none; 
+  background-color: #000;
+}
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-move 0.5s ease-in forwards;
+  box-shadow: 2px 2px 5px rgba(255, 102, 6, 0.479);
+  filter: blur(2.2px);
+}
+@keyframes particle-move {
+  0% {
+    transform: translateY(0) scale(1.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(0.3);
+    opacity: 0;
+  }
+}
